@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>PiranhaCMS</id>
+    <version>1.1.4</version>
+    <title>Web site template for Piranha CMS</title>
+    <authors>Håkan Edling</authors>
+    <owners>Håkan Edling</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <projectUrl>http://github.com/tidyui/piranha/</projectUrl>
+    <iconUrl>http://piranhacms.org/content/img/nuget.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This is the base template for building a Piranha CMS web application. It creates an empty project with an unistalled SqlCompact database. This package also contains all of the core Piranha CMS binaries.</description>
+    <summary>Piranha is the fun, fast and lightweight open-source CMS framework for .NET, MVC &amp; WebPages with Razor syntax.</summary>
+    <releaseNotes>See the changelog available at:
+http://piranhacms.org/home/changelog</releaseNotes>
+    <copyright>Håkan Edling</copyright>
+    <dependencies>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="YUICompressor.NET" version="2.2.0.0" />
+        <dependency id="EntityFramework" version="5.0.0" />
+      </group>
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Data.Linq" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+    <references>
+      <reference file="Piranha.dll" />
+    </references>
+  </metadata>
+</package>
