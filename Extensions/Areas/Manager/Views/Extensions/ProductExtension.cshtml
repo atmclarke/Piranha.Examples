@@ -1,0 +1,14 @@
+﻿@model ProductExtension
+
+<ul class="form">
+    <li>
+        @Html.LabelFor(m => m.Price, "Price")
+        <div class="input">
+            @Html.TextBoxFor(m => m.Price)</div>
+    </li>
+    <li>
+        @Html.LabelFor(m => m.InStock, "In stock")
+        <div class="input">
+            @Html.TextBoxFor(m => m.InStock)</div>
+    </li>
+</ul>

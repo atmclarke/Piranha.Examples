@@ -1,0 +1,19 @@
+﻿@model UserExtension
+
+<ul class="form">
+    <li>
+        @Html.LabelFor(m => m.StreetAddress, "Street address")
+        <div class="input">
+            @Html.TextBoxFor(m => m.StreetAddress)</div>
+    </li>
+    <li>
+        @Html.LabelFor(m => m.ZipCode, "Zip code")
+        <div class="input">
+            @Html.TextBoxFor(m => m.ZipCode)</div>
+    </li>
+    <li>
+        @Html.LabelFor(m => m.Country, "Countries")
+        <div class="input">
+            @Html.DropDownListFor(m => m.Country, Model.Countries)</div>
+    </li>
+</ul>
