@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.ComponentModel.Composition;
 
 using Piranha.Extend;
 
 /// <summary>
 /// A simple product extension applied to posts of the type "Standard product" and "Special product"
 /// </summary>
-[Extension(InternalId="ProductExtension", Name="Specification", Type=ExtensionType.Post)]
-public class ProductExtension : IExtension
+[Export(typeof(IExtension))]
+[ExportMetadata("InternalId", "ProductExtension")]
+[ExportMetadata("Name", "Specification")]
+[ExportMetadata("Type", ExtensionType.Post)]
+[Serializable]
+public class ProductExtension : Extension
 {
 	/// <summary>
 	/// Gets/sets the price.

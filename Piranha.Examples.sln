@@ -11,7 +11,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Extensions", "http://localhost:6380", "{64B080A5-D249-4568-B6A6-1ADF08893A59}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_6380"
 		Debug.AspNetCompiler.PhysicalPath = "Extensions\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_6380\"

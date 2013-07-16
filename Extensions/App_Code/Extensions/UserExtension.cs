@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Globalization;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,12 @@ using Piranha.Extend;
 /// <summary>
 /// Generic user extension that is applied to all users.
 /// </summary>
-[Extension(Name="Contact address", InternalId="ContactAddress", Type=ExtensionType.User)]
-public class UserExtension : IExtension
+[Export(typeof(IExtension))]
+[ExportMetadata("InternalId", "ContactAddress")]
+[ExportMetadata("Name", "Contact address")]
+[ExportMetadata("Type", ExtensionType.User)]
+[Serializable]
+public class UserExtension : Extension
 {
 	#region Members
 	/// <summary>
@@ -61,7 +66,7 @@ public class UserExtension : IExtension
 	/// Initializes the extension when loaded in the manager interface.
 	/// </summary>
 	/// <param name="model">The current edit model</param>
-	public void Init(object model) {
+	public override void Init(object model) {
 		Countries = new SelectList(countries, "Name", "Name", Country) ;
 	}
 }
